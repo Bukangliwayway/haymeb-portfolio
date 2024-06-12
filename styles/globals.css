@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --secondary-aurora: #d00000;
+  --neutral-aurora: #0016ba;
+  --main-aurora: #000000;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
