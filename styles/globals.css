@@ -6,6 +6,13 @@
   --secondary-aurora: #d00000;
   --neutral-aurora: #0016ba;
   --main-aurora: #000000;
+
+  --main-dark: #0c0d12;
+  --main-shade: #212542;
+  --main-bright: #ef060a;
+  --main-muted: #9d1424;
+  --main-deep: #54293d;
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
