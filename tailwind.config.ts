@@ -16,7 +16,11 @@ const config: Config = {
         aurora: "aurora 60s linear infinite",
       },
       colors: {
-        "dark-red": "#fff",
+        "main-hero": "var(--main-highlight)",
+      },
+      fontFamily: {
+        "main-hero": ["Roboto Condensed", "sans-serif"],
+        "main-hero-flip": ["Open Sans", "sans-serif"],
       },
       keyframes: {
         aurora: {
@@ -39,6 +43,7 @@ const config: Config = {
         muted: "var(--main-muted)",
         bright: "var(--main-bright)",
         deep: "var(--main-deep)",
+        highlight: "var(--main-highlight)",
       },
     },
   },

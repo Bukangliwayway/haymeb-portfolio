@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 
 export const FlipWords = ({
   words,
-  duration = 1000,
+  duration = 3000,
   className,
 }: {
   words: string[];
@@ -60,7 +60,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-dark-red",
+          "z-10 inline-block relative text-left text-neutral-900 dark:text-dark-red text-main-hero-flip",
           className
         )}
         key={currentWord}
@@ -74,7 +74,7 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.2,
             }}
-            className="inline-block"
+            className="inline-block whitespace-pre"
           >
             {letter}
           </motion.span>
