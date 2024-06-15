@@ -5,7 +5,19 @@ import React from "react";
 
 const HeroSection = () => {
   const words = ["better", "cute", "beautiful", "modern"];
-  const images = ["/sample1.webp", "/sample2.webp"];
+  const images = [
+    "/hero1.webp",
+    "/hero2.webp",
+    "/hero3.webp",
+    "/hero4.webp",
+    "/hero5.webp",
+    "/hero6.webp",
+    "/hero7.webp",
+    "/hero8.webp",
+    "/hero9.webp",
+    "/hero10.webp",
+    "/hero11.webp",
+  ];
 
   return (
     <div>
