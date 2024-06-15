@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Boxes = () => {
-  const rotate1 = Math.floor(Math.random() * 360);
-  const rotate2 = -rotate1 + Math.floor(Math.random() * 20 + 1);
+  const [rotate1, setRotate1] = useState(Math.floor(Math.random() * 360));
+  const [rotate2, setRotate2] = useState(
+    -rotate1 + Math.floor(Math.random() * 20 + 1)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotate1(Math.floor(Math.random() * 360));
+      setRotate2(-rotate1 + Math.floor(Math.random() * 20 + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [rotate1]);
+
   return (
     <>
       <motion.div
