@@ -22,9 +22,8 @@ const HeroSection = () => {
   return (
     <div>
       <div className="flex justify-center items-center relative h-[100vh]">
-        <ImagesSlider images={images} className="absolute z-10 top-10 w-80" />
+        <ImagesSlider images={images} className="absolute z-10 min-w-80 " />
         <Boxes />
-        {/* <ImagesSlider className="z-50" images={images}></ImagesSlider> */}
         <div className="text-4xl mx-auto font-normal text-center ">
           Build websites with Aceternity UI
           <br />

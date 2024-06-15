@@ -63,7 +63,7 @@ export const ImagesSlider = ({
           animate="visible"
           exit="exit"
           variants={slideVariants}
-          className="absolute top-0 left-0"
+          className="absolute -top-32 bottom-0 left-0 right-0 m-auto"
         />
       </AnimatePresence>
     </div>
