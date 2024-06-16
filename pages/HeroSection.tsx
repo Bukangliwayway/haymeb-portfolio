@@ -7,7 +7,7 @@ const HeroSection = () => {
   const words = [
     "web developer",
     "UI/UX designer",
-    "full-stack programmer",
+    "full-stack dev",
     "ISkolar ng Bayan",
   ];
   const images = [
@@ -26,25 +26,25 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center relative h-[100vh]">
+      <div className="flex justify-center items-center relative h-[100vh] mt-10 lg:mt-0">
         <ImagesSlider images={images} className="absolute z-20 min-w-80 " />
         <Boxes />
-        <div className="relative mx-auto font-normal text-center font-main-hero">
-          <div className="absolute text-4xl w-[12ch] z-20 text-white  text-left right-20 -top-[7.25rem]">
+        <div className="relative mx-auto font-main-hero">
+          <div className="absolute hidden z-20 right-20 -top-[7.25rem] w-[12ch] text-left text-white lg:block lg:text-4xl">
             <h1> HELLO THERE!</h1>
           </div>
-          <div className="absolute text-4xl w-[12ch] z-10 text-white  text-left left-[3.75rem] -top-[7.25rem]">
+          <div className="absolute z-10 -top-[19rem] -left-[10.5rem] w-[12ch] text-4xl text-left text-white font-semibold lg:left-[3.75rem] lg:-top-[7.25rem] lg:font-normal">
             <h1> THIS IS </h1>
           </div>
-          <div className="absolute text-9xl z-20 text-white text-left right-10 -bottom-8 font-medium">
+          <div className="absolute z-10 -right-28 bottom-44 text-8xl text-left text-white font-medium lg:text-9xl lg:z-20 lg:right-10 lg:-bottom-8">
             <h1>HAYME</h1>
           </div>
-          <div className="absolute text-9xl text-main-hero font-medium z-10 left-10 -bottom-8 text-left">
+          <div className="absolute z-20 -right-44 -bottom-36 text-8xl text-left text-main-hero font-black lg:text-9xl lg:font-medium lg:z-10 lg:left-10 lg:-bottom-8">
             <h1>BELGICA</h1>
           </div>
           <FlipWords
             words={words}
-            className="absolute text-7xl z-20 w-[30ch] text-center -left-80 -bottom-28 text-white font-main capitalize font-semibold"
+            className="absolute z-20 -right-[17rem] -bottom-44 w-[30ch] text-4xl text-center text-white font-main capitalize font-semibold lg:text-7xl lg:w-[30ch] lg:-left-80 lg:-bottom-28"
           />
         </div>
       </div>
