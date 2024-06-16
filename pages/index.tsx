@@ -58,26 +58,24 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <FloatingNav navItems={navItems} />
-      {/* <SmoothScroll> */}
-      <section id="home" ref={homeRef}>
-        <HeroSection />
-      </section>
-      <section id="about" ref={aboutRef} className="h-[100vh]">
-        <HeroSection />
-      </section>
-      <section id="projects" ref={projectsRef} className="h-[100vh]">
-        <HeroSection />
-      </section>
-      <section id="skills" ref={skillsRef} className="h-[100vh]">
-        <HeroSection />
-      </section>
-      <section id="experience" ref={experienceRef} className="h-[100vh]">
-        <HeroSection />
-      </section>
-      <section id="contact" ref={contactRef} className="h-[100vh]">
-        <HeroSection />
-      </section>
-      {/* </SmoothScroll> */}
+        <section id="home" ref={homeRef}>
+          <HeroSection />
+        </section>
+        <section id="about" ref={aboutRef} className="h-[100vh]">
+          <HeroSection />
+        </section>
+        <section id="projects" ref={projectsRef} className="h-[100vh]">
+          <HeroSection />
+        </section>
+        <section id="skills" ref={skillsRef} className="h-[100vh]">
+          <HeroSection />
+        </section>
+        <section id="experience" ref={experienceRef} className="h-[100vh]">
+          <HeroSection />
+        </section>
+        <section id="contact" ref={contactRef} className="h-[100vh]">
+          <HeroSection />
+        </section>
     </div>
   );
 }
