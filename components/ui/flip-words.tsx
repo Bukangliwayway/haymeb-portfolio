@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 2000,
   className,
 }: {
   words: string[];
@@ -65,20 +65,26 @@ export const FlipWords = ({
         )}
         key={currentWord}
       >
-        {currentWord.split("").map((letter, index) => (
-          <motion.span
-            key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: "blur(80px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: index * 0.08,
-              duration: 0.2,
-            }}
-            className="inline-block whitespace-pre"
-          >
-            {letter}
-          </motion.span>
-        ))}
+        {currentWord.split("").map((letter, index, array) => {
+          const totalAnimationTime = 1; // total time for the animation in seconds
+          const delay = (totalAnimationTime / (array.length + 1)) * index; // delay for each letter
+          const animationDuration = totalAnimationTime / (array.length + 1); // duration of the animation for each letter
+
+          return (
+            <motion.span
+              key={currentWord + index}
+              initial={{ opacity: 0, y: 10, filter: "blur(80px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                delay: delay,
+                duration: animationDuration,
+              }}
+              className="inline-block whitespace-pre"
+            >
+              {letter}
+            </motion.span>
+          );
+        })}
       </motion.div>
     </AnimatePresence>
   );

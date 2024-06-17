@@ -12,9 +12,21 @@ export const ImagesSlider = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Shuffle array function
+  const shuffleArray = (array: any[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  // Shuffle images array
+  const shuffledImages = shuffleArray([...images]);
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+      prevIndex + 1 === shuffledImages.length ? 0 : prevIndex + 1
     );
   };
 
@@ -58,12 +70,13 @@ export const ImagesSlider = ({
       <AnimatePresence>
         <motion.img
           key={currentIndex}
-          src={images[currentIndex]}
+          src={shuffledImages[currentIndex]}
           initial="initial"
           animate="visible"
           exit="exit"
           variants={slideVariants}
           className="absolute -top-32 bottom-0 left-0 right-0 m-auto"
+          loading="lazy"
         />
       </AnimatePresence>
     </div>

@@ -1,10 +1,15 @@
+import BottomTexts from "@/components/Hero/BottomTexts";
 import Boxes from "@/components/Hero/Boxes";
-import { FloatingNavDemo } from "@/components/Hero/NavBar";
 import Texts from "@/components/Hero/Texts";
 import { ImagesSlider } from "@/components/ui/image-slider";
-import React from "react";
 
-const HeroSection = () => {
+import React, { RefObject } from "react";
+
+interface HeroSectionProps {
+  contactRef: RefObject<HTMLElement>;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ contactRef }) => {
   const images = [
     "/hero1.webp",
     "/hero2.webp",
@@ -21,10 +26,14 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center relative h-[100vh] mt-10 lg:mt-0">
-        <ImagesSlider images={images} className="absolute z-20 min-w-80 " />
+      <div className="flex justify-center items-center relative h-[100vh] mt-5 lg:mt-0">
+        <ImagesSlider
+          images={images}
+          className="absolute z-20 min-w-[70%] lg:min-w-[60%]"
+        />
         <Boxes />
         <Texts />
+        <BottomTexts contactRef={contactRef} />
       </div>
     </div>
   );

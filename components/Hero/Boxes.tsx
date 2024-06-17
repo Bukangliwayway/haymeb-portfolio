@@ -19,7 +19,7 @@ const Boxes = () => {
   return (
     <>
       <motion.div
-        className="bg-shade min-w-[24rem] min-h-[21rem] absolute "
+        className="bg-shade min-w-[75%] min-h-[45%] lg:min-w-[30%] lg:min-h-[55%] absolute "
         initial={{ opacity: 0, x: -100, y: -100, scale: 0.8 }}
         animate={{
           opacity: 0.7,
@@ -31,7 +31,7 @@ const Boxes = () => {
         transition={{ duration: 0.4, type: "spring", stiffness: 100 }}
       />
       <motion.div
-        className="bg-bright min-w-[22rem] min-h-[23rem] absolute  "
+        className="bg-bright min-w-[70%] min-h-[40%] lg:min-w-[30%] lg:min-h-[50%] absolute  "
         initial={{ opacity: 0, x: 100, y: 100, scale: 0.8 }}
         animate={{
           opacity: 0.5,

@@ -14,15 +14,26 @@ const config: Config = {
     extend: {
       animation: {
         aurora: "aurora 60s linear infinite",
+        shimmer: "shimmer 3s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite",
       },
       colors: {
         "main-hero": "var(--main-highlight)",
+        "main-shade": "var(--main-shade)",
+        "main-muted": "var(--main-muted)",
       },
       fontFamily: {
         "main-hero": ["Roboto Condensed", "sans-serif"],
         "main-hero-flip": ["Open Sans", "sans-serif"],
       },
       keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",

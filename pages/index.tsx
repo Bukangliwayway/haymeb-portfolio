@@ -1,13 +1,8 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { motion } from "framer-motion";
-import { FlipWords } from "@/components/ui/flip-words";
 import HeroSection from "./HeroSection";
 import { useRef } from "react";
 import { Award, Briefcase, HomeIcon, Layers, Mail, User } from "lucide-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import SmoothScroll from "@/components/ui/smooth-scroll";
+import About from "@/components/About/About";
 
 export default function Home() {
   const homeRef = useRef<HTMLElement>(null);
@@ -58,24 +53,60 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <FloatingNav navItems={navItems} />
-        <section id="home" ref={homeRef}>
-          <HeroSection />
-        </section>
-        <section id="about" ref={aboutRef} className="h-[100vh]">
-          <HeroSection />
-        </section>
-        <section id="projects" ref={projectsRef} className="h-[100vh]">
-          <HeroSection />
-        </section>
-        <section id="skills" ref={skillsRef} className="h-[100vh]">
-          <HeroSection />
-        </section>
-        <section id="experience" ref={experienceRef} className="h-[100vh]">
-          <HeroSection />
-        </section>
-        <section id="contact" ref={contactRef} className="h-[100vh]">
-          <HeroSection />
-        </section>
+      <section id="home" ref={homeRef}>
+        <HeroSection contactRef={contactRef} />
+      </section>
+      <section id="about" ref={aboutRef} className="h-[100vh]">
+        <About />
+      </section>
+      <section id="projects" ref={projectsRef} className="h-[100vh]">
+        <div className="flex flex-col justify-center items-center h-full gap-5">
+          <h1 className="font-main-hero capitalize text-5xl">Projects</h1>
+          <div className="flex gap-5">
+            <p className="w-1/2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
+              similique.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="skills" ref={skillsRef} className="h-[100vh]">
+        <div className="flex flex-col justify-center items-center h-full gap-5">
+          <h1 className="font-main-hero capitalize text-5xl">skills</h1>
+          <div className="flex gap-5">
+            <p className="w-1/2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
+              similique.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="experience" ref={experienceRef} className="h-[100vh]">
+        <div className="flex flex-col justify-center items-center h-full gap-5">
+          <h1 className="font-main-hero capitalize text-5xl">experience</h1>
+          <div className="flex gap-5">
+            <p className="w-1/2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
+              similique.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" ref={contactRef} className="h-[100vh]">
+        <div className="flex flex-col justify-center items-center h-full gap-5">
+          <h1 className="font-main-hero capitalize text-5xl">contact me</h1>
+          <div className="flex gap-5">
+            <p className="w-1/2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
+              similique.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
