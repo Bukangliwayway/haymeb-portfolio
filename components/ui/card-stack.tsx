@@ -8,6 +8,7 @@ type Card = {
   id: number;
   name: string;
   content: React.ReactNode;
+  detailed: React.ReactNode;
 };
 
 export const CardStack = ({
@@ -29,22 +30,25 @@ export const CardStack = ({
     return () => clearInterval(interval);
   }, []);
   const startFlipping = () => {
+    const flipInterval = window.matchMedia("(min-width: 1024px)").matches
+      ? 10000
+      : 5000;
     interval = setInterval(() => {
       setCards((prevCards: Card[]) => {
         const newArray = [...prevCards]; // create a copy of the array
         newArray.unshift(newArray.pop()!); // move the last element to the front
         return newArray;
       });
-    }, 5000);
+    }, flipInterval);
   };
 
   return (
-    <div className="relative  h-[16rem] w-[20rem]">
+    <div className="relative h-[16rem] w-[20rem] lg:h-full">
       {cards.map((card, index) => {
         return (
           <motion.div
             key={card.id}
-            className=" absolute dark:bg-black bg-white h-full w-full md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col "
+            className=" absolute dark:bg-black bg-white h-full w-full  rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col "
             style={{
               transformOrigin: "top center",
             }}
@@ -57,8 +61,11 @@ export const CardStack = ({
             <p className="text-md text-neutral-500 font-medium dark:text-white mb-5">
               {card.name}
             </p>
-            <div className="font-normal text-neutral-700 dark:text-neutral-200">
+            <div className="lg:hidden font-normal text-neutral-700 dark:text-neutral-200">
               {card.content}
+            </div>
+            <div className="lg:block hidden font-normal text-neutral-700 dark:text-neutral-200">
+              {card.detailed}
             </div>
           </motion.div>
         );

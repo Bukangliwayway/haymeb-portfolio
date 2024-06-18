@@ -53,13 +53,21 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <FloatingNav navItems={navItems} />
-      <section id="home" ref={homeRef}>
+      <section id="home" ref={homeRef} className="max-w-[80rem] mx-auto">
         <HeroSection contactRef={contactRef} />
       </section>
-      <section id="about" ref={aboutRef} className="h-[100vh]">
+      <section
+        id="about"
+        ref={aboutRef}
+        className="min-h-[100vh] max-w-[80rem] mx-auto"
+      >
         <About />
       </section>
-      <section id="projects" ref={projectsRef} className="h-[100vh]">
+      <section
+        id="projects"
+        ref={projectsRef}
+        className="h-[100vh] max-w-[80rem] mx-auto"
+      >
         <div className="flex flex-col justify-center items-center h-full gap-5">
           <h1 className="font-main-hero capitalize text-5xl">Projects</h1>
           <div className="flex gap-5">
@@ -71,7 +79,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="skills" ref={skillsRef} className="h-[100vh]">
+      <section
+        id="skills"
+        ref={skillsRef}
+        className="h-[100vh] max-w-[80rem] mx-auto"
+      >
         <div className="flex flex-col justify-center items-center h-full gap-5">
           <h1 className="font-main-hero capitalize text-5xl">skills</h1>
           <div className="flex gap-5">
@@ -83,7 +95,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="experience" ref={experienceRef} className="h-[100vh]">
+      <section
+        id="experience"
+        ref={experienceRef}
+        className="h-[100vh] max-w-[80rem] mx-auto"
+      >
         <div className="flex flex-col justify-center items-center h-full gap-5">
           <h1 className="font-main-hero capitalize text-5xl">experience</h1>
           <div className="flex gap-5">
@@ -95,7 +111,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="contact" ref={contactRef} className="h-[100vh]">
+      <section
+        id="contact"
+        ref={contactRef}
+        className="h-[100vh] max-w-[80rem] mx-auto"
+      >
         <div className="flex flex-col justify-center items-center h-full gap-5">
           <h1 className="font-main-hero capitalize text-5xl">contact me</h1>
           <div className="flex gap-5">

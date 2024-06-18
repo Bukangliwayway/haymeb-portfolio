@@ -21,7 +21,7 @@ const useSectionsInView = (navItems: NavItem[]): boolean[] => {
             return newInViews;
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.5 }
       );
 
       if (navItem.ref.current) {
