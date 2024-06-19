@@ -31,7 +31,7 @@ const About = () => {
           <span>About</span>
           <Highlight className="text-black dark:text-white">Haymeb</Highlight>
         </div>
-        <div className=" z-50 flex gap-10 justify-center items-center my-auto flex-col lg:flex-row">
+        <div className=" z-50 flex gap-10 justify-center items-center my-auto flex-col">
           <div className="mt-10">
             <p className="px-[5ch] leading-7">
               As a seasoned{" "}

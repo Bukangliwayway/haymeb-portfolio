@@ -3,6 +3,10 @@ import { useRef } from "react";
 import { Award, Briefcase, HomeIcon, Layers, Mail, User } from "lucide-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import About from "@/components/About/About";
+import Project from "@/components/Projects/Index";
+import Skill from "@/components/Skills/Index";
+import Experience from "@/components/Experiences/Index";
+import Contact from "@/components/Contact/Index";
 
 export default function Home() {
   const homeRef = useRef<HTMLElement>(null);
@@ -66,66 +70,30 @@ export default function Home() {
       <section
         id="projects"
         ref={projectsRef}
-        className="h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mx-auto"
       >
-        <div className="flex flex-col justify-center items-center h-full gap-5">
-          <h1 className="font-main-hero capitalize text-5xl">Projects</h1>
-          <div className="flex gap-5">
-            <p className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
-              similique.
-            </p>
-          </div>
-        </div>
+        <Project />
       </section>
       <section
         id="skills"
         ref={skillsRef}
         className="h-[100vh] max-w-[80rem] mx-auto"
       >
-        <div className="flex flex-col justify-center items-center h-full gap-5">
-          <h1 className="font-main-hero capitalize text-5xl">skills</h1>
-          <div className="flex gap-5">
-            <p className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
-              similique.
-            </p>
-          </div>
-        </div>
+        <Skill />
       </section>
       <section
         id="experience"
         ref={experienceRef}
         className="h-[100vh] max-w-[80rem] mx-auto"
       >
-        <div className="flex flex-col justify-center items-center h-full gap-5">
-          <h1 className="font-main-hero capitalize text-5xl">experience</h1>
-          <div className="flex gap-5">
-            <p className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
-              similique.
-            </p>
-          </div>
-        </div>
+        <Experience />
       </section>
       <section
         id="contact"
         ref={contactRef}
         className="h-[100vh] max-w-[80rem] mx-auto"
       >
-        <div className="flex flex-col justify-center items-center h-full gap-5">
-          <h1 className="font-main-hero capitalize text-5xl">contact me</h1>
-          <div className="flex gap-5">
-            <p className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              esse suscipit voluptatem cumque enim fuga facere harum fugit sequi
-              similique.
-            </p>
-          </div>
-        </div>
+        <Contact />
       </section>
     </div>
   );
