@@ -55,43 +55,47 @@ export default function Home() {
     },
   ];
   return (
-    <div className="overflow-hidden">
+    <div>
       <FloatingNav navItems={navItems} />
-      <section id="home" ref={homeRef} className="max-w-[80rem] mx-auto">
+      <section
+        id="home"
+        ref={homeRef}
+        className="max-w-[80rem] mb-10 mx-auto overflow-hidden"
+      >
         <HeroSection contactRef={contactRef} />
       </section>
       <section
         id="about"
         ref={aboutRef}
-        className="min-h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mb-10 mx-auto"
       >
         <About />
       </section>
       <section
         id="projects"
         ref={projectsRef}
-        className="min-h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mb-10 mx-auto"
       >
         <Project />
       </section>
       <section
         id="skills"
         ref={skillsRef}
-        className="h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mb-10 mx-auto"
       >
         <Skill />
       </section>
       <section
         id="experience"
         ref={experienceRef}
-        className="h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mb-10 mx-auto"
       >
         <Experience />
       </section>
       <section
         id="contact"
         ref={contactRef}
-        className="h-[100vh] max-w-[80rem] mx-auto"
+        className="min-h-[100vh] max-w-[80rem] mb-10 mx-auto"
       >
         <Contact />
       </section>
