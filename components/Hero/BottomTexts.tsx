@@ -21,7 +21,7 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
         className=" w-[25ch] lg:h-16 inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       >
         <span className="capitalize font-semibold text-lg">
-          Let's talk here
+          Let&apos;s talk here
         </span>
         <motion.div
           animate={{ x: isHovered ? 20 : 0 }} // adjust the values to control the distance of the jump
