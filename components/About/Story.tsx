@@ -16,7 +16,7 @@ const CARDS = [
     ),
     detailed: (
       <p>
-        I'm a proud graduate of the Information Technology program at
+        I&apos;m a proud graduate of the Information Technology program at
         Polytechnic University of the Philippines Quezon City, starting my
         journey in 2020.
         <br />

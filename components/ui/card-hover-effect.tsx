@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { WobbleCard } from "./wobble-card";
+import Image from "next/image";
 
 export const HoverEffect = ({
   items,
@@ -26,7 +27,7 @@ export const HoverEffect = ({
           <h1 className="font-bold text-lg text-center">
             {items[clickedIndex]?.title}
           </h1>
-          <img
+          <Image
             src={items[clickedIndex]?.icon}
             className="w-20  mx-auto"
             alt=""
@@ -68,7 +69,7 @@ export const HoverEffect = ({
               )}
             </AnimatePresence>
             <Card>
-              <img src={item?.icon} className="w-12  mx-auto" alt="" />
+              <Image src={item?.icon} className="w-12  mx-auto" alt="" />
               <h1 className="font-bold text-center">{item.title}</h1>
             </Card>
           </div>
@@ -79,7 +80,7 @@ export const HoverEffect = ({
           <h1 className="font-bold text-lg lg:text-4xl text-center">
             {items[clickedIndex]?.title}
           </h1>
-          <img
+          <Image
             src={items[clickedIndex]?.icon}
             className="w-20 lg:w-44  mx-auto"
             alt=""

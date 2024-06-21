@@ -38,7 +38,7 @@ const About = () => {
               <span className="mx-2">
                 <Highlight className="">full-stack developer</Highlight>
               </span>{" "}
-              I've spent{" "}
+              I&apos;ve spent{" "}
               <span className="mx-2">
                 <Highlight className="">3 years</Highlight>
               </span>{" "}
@@ -50,7 +50,7 @@ const About = () => {
               <span className="mx-2">
                 <Highlight className="">Laravel</Highlight>
               </span>
-              but still I'm always eager to{" "}
+              but still I&apos; always eager to{" "}
               <span className="mx-2">
                 <Highlight className="">explore new frameworks</Highlight>
               </span>
@@ -81,7 +81,7 @@ const About = () => {
             <span className="">
               <Highlight className="">3 years</Highlight>
             </span>{" "}
-            of experience, I've led the development of complex systems such as a
+            of experience, I&apos;e led the development of complex systems such as a
             Research Paper Management System and an Alumni Performance
             Management System at PUPQC. My role as a lead developer covered both
             backend and frontend development, ensuring a seamless user
@@ -96,11 +96,11 @@ const About = () => {
             <span className="">
               <Highlight className="">Laravel</Highlight>
             </span>
-            , but I'm always eager to{" "}
+            , but I&apos; always eager to{" "}
             <span className="">
               <Highlight className="">explore new frameworks</Highlight>
             </span>
-            . I've also utilized various tech stacks in my projects, including
+            . I&apos;e also utilized various tech stacks in my projects, including
             FastAPI, Kibana, and have experience deploying on Onrender and AWS
             EC2.
             <br />

@@ -1,6 +1,7 @@
 import { Linkedin, LucideArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import React, { RefObject, useState } from "react";
+import Image from "next/image";
 
 interface BottomTextsProps {
   contactRef: RefObject<HTMLElement>;
@@ -55,7 +56,7 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <img src="/linkedin.png" className="w-12 lg:w-20" alt="" />
+            <Image src="/linkedin.png" className="w-12 lg:w-20" alt="" />
           </motion.div>
         </a>
         <a
@@ -76,7 +77,7 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <img src="/github.png" className="w-12 lg:w-20" alt="" />
+            <Image src="/github.png" className="w-12 lg:w-20" alt="" />
           </motion.div>
         </a>
         <a
@@ -97,7 +98,7 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <img
+            <Image
               src="/code.png"
               className="w-12 lg:w-20  object-cover bg-white rounded-full"
               alt=""

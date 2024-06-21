@@ -1,5 +1,6 @@
 import React from "react";
 import { Highlight } from "../ui/hero-highlight";
+import Image from "next/image";
 
 const Experience = () => {
   const data = [
@@ -52,8 +53,8 @@ const Experience = () => {
           <Highlight>MySQL</Highlight>. We implemented a{" "}
           <Highlight>full-stack website</Highlight> optimized{" "}
           <Highlight>for mobile users</Highlight>, providing a seamless ordering
-          experience for Juan Cafe's clientele. This project allowed me to apply
-          and enhance my web development skills in a real-world context.
+          experience for Juan Cafe&apos;s clientele. This project allowed me to
+          apply and enhance my web development skills in a real-world context.
         </p>
       ),
       time: "Oct 2022 - Feb 2023",
@@ -148,7 +149,7 @@ const Experience = () => {
               <div className="md:flex items-center md:space-x-4 mb-3">
                 <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
                   <div className="flex items-center justify-center w-10 h-10 p-1 rounded-full bg-black border border-gray-700  shadow md:order-1">
-                    <img src={item?.logo} alt="" />
+                    <Image src={item?.logo} alt="" />
                   </div>
                   <time className="lg:text-right pr-[2ch] font-medium text-lg  md:w-[19.5ch]">
                     {item?.time}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const Texts = () => {
   const variants = {
     hidden: { opacity: 0 },
@@ -35,7 +36,7 @@ const Texts = () => {
           }}
           className="absolute z-50 -right-[13rem] lg:right-[4rem] -top-[4rem] lg:top-[1rem] w-40 lg:w-40 inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground tracking-widest font-normal text-lg hover:bg-primary/90 px-4 py-2 bg-transparent"
         >
-          <img src="/badge.svg" alt="Badge" loading="lazy" />
+          <Image src="/badge.svg" alt="Badge" loading="lazy" />
         </motion.button>
       </a>
       <motion.div
