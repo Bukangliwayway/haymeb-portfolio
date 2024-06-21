@@ -70,7 +70,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
   const { scrollYProgress } = useScroll();
   const [lastYPos, setLastYPos] = useState(0);
   const inViews = useSectionsInView(navItems);
-  useEffect(() => {    
+  useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((v) => {
       setLastYPos(v);
     });
@@ -101,6 +101,8 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
       >
         {navItems.map((navItem, idx) => {
           const inView = inViews[idx];
+          console.log(inView, idx, navItem.name);
+
           return (
             <motion.button
               key={`link=${idx}`}
