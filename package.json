@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "email": "email dev --dir pages/emails",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,15 +12,20 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
+    "@react-email/components": "0.0.19",
     "lucide-react": "^0.395.0",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "react-element-to-jsx-string": "^15.0.0",
+    "react-email": "2.1.4",
     "react-intersection-observer": "^9.10.3",
+    "resend": "^3.3.0",
+    "stream-browserify": "^3.0.0",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
+    "@react-email/components": "0.0.19",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

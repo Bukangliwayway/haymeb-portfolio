@@ -121,7 +121,8 @@ const Experience = () => {
           <Highlight>deployment-driven testing</Highlight>, deploying an{" "}
           <Highlight>Amazon EC2 instance</Highlight>
           for a testing environment, which improved quality testing. I was also
-          introduced to the integration of <Highlight>{" "}
+          introduced to the integration of <Highlight>
+            {" "}
             Dialogflow
           </Highlight>{" "}
           into the system for chatbot usage.
@@ -154,7 +155,9 @@ const Experience = () => {
                   </time>
                 </div>
                 <div className=" ml-14 lg:w-[90ch]">
-                  <span className=" font-bold ">{item.title}</span>
+                  <span className=" text-balance text-xl font-semibold tracking-[-0.015em] ">
+                    {item.title}
+                  </span>
                 </div>
               </div>
               <div className=" p-4 rounded ml-10 md:ml-[26ch] lg:w-[80ch] lg:px-[5ch] leading-7">
