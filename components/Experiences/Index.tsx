@@ -149,7 +149,10 @@ const Experience = () => {
               <div className="md:flex items-center md:space-x-4 mb-3">
                 <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
                   <div className="flex items-center justify-center w-10 h-10 p-1 rounded-full bg-black border border-gray-700  shadow md:order-1">
-                    <Image src={item?.logo} alt="" />
+                    <img
+                      src={item?.logo}
+                      alt=""
+                    />
                   </div>
                   <time className="lg:text-right pr-[2ch] font-medium text-lg  md:w-[19.5ch]">
                     {item?.time}

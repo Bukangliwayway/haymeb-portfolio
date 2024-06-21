@@ -56,7 +56,12 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <Image src="/linkedin.png" className="w-12 lg:w-20" alt="" />
+            <img
+              src="/linkedin.png"
+              className="w-12 lg:w-20"
+              alt=""
+              width={undefined}
+            />
           </motion.div>
         </a>
         <a
@@ -77,7 +82,12 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <Image src="/github.png" className="w-12 lg:w-20" alt="" />
+            <img
+              src="/github.png"
+              width={undefined}
+              className="w-12 lg:w-20"
+              alt=""
+            />
           </motion.div>
         </a>
         <a
@@ -98,7 +108,7 @@ const BottomTexts: React.FC<BottomTextsProps> = ({ contactRef }) => {
               },
             }}
           >
-            <Image
+            <img
               src="/code.png"
               className="w-12 lg:w-20  object-cover bg-white rounded-full"
               alt=""

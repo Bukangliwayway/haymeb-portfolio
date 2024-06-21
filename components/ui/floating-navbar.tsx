@@ -31,8 +31,9 @@ const useSectionsInView = (navItems: NavItem[]): boolean[] => {
 
     return () => {
       observers.forEach((observer, index) => {
-        if (navItems[index].ref.current !== null) {
-          observer.unobserve(navItems[index].ref.current);
+        const element = navItems[index]?.ref?.current;
+        if (element !== null) {
+          observer.unobserve(element);
         }
       });
     };

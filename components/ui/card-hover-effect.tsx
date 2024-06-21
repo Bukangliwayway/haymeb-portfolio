@@ -28,6 +28,8 @@ export const HoverEffect = ({
             {items[clickedIndex]?.title}
           </h1>
           <Image
+            width={80}
+            height={80}
             src={items[clickedIndex]?.icon}
             className="w-20  mx-auto"
             alt=""
@@ -69,7 +71,13 @@ export const HoverEffect = ({
               )}
             </AnimatePresence>
             <Card>
-              <Image src={item?.icon} className="w-12  mx-auto" alt="" />
+              <Image
+                width={48}
+                height={48}
+                src={item?.icon}
+                className="w-12  mx-auto"
+                alt=""
+              />
               <h1 className="font-bold text-center">{item.title}</h1>
             </Card>
           </div>
@@ -81,6 +89,8 @@ export const HoverEffect = ({
             {items[clickedIndex]?.title}
           </h1>
           <Image
+            width={80}
+            height={80}
             src={items[clickedIndex]?.icon}
             className="w-20 lg:w-44  mx-auto"
             alt=""

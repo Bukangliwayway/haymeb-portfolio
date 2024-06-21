@@ -46,6 +46,8 @@ export const AboutSlider = ({
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.src = image;
+        img.width = 80;
+        img.height = 80;
         img.onload = () => resolve(image);
         img.onerror = reject;
       });

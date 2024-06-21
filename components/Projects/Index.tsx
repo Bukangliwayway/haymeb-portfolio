@@ -156,6 +156,8 @@ export default function Project() {
                       />
                       <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full  px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl gap-3">
                         <Image
+                          width={24}
+                          height={24}
                           src={tech.icon}
                           alt={tech.name}
                           className="w-6"
