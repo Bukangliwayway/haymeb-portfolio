@@ -8,8 +8,6 @@ import { RefObject } from "react";
 
 const useSectionsInView = (navItems: NavItem[]): boolean[] => {
   const [inViews, setInViews] = useState<boolean[]>([]);
-  const { scrollYProgress } = useScroll();
-  const smoothProgress = useSpring(scrollYProgress, { mass: 0.1 });
 
   useEffect(() => {
     const observers = navItems.map((navItem, index) => {
@@ -21,7 +19,7 @@ const useSectionsInView = (navItems: NavItem[]): boolean[] => {
             return newInViews;
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.1, rootMargin: "0px 0px -50% 0px" }
       );
 
       if (navItem.ref.current) {
@@ -40,17 +38,8 @@ const useSectionsInView = (navItems: NavItem[]): boolean[] => {
     };
   }, [navItems]);
 
-  // Find the topmost section that's in view
-  const topmostInViewIndex = inViews.lastIndexOf(true);
-
-  // Only the topmost section in view should be marked as true
-  const adjustedInViews = inViews.map(
-    (inView, index) => index === topmostInViewIndex
-  );
-
-  return adjustedInViews;
+  return inViews;
 };
-
 interface NavItem {
   name: string;
   link: string;
@@ -101,8 +90,6 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
       >
         {navItems.map((navItem, idx) => {
           const inView = inViews[idx];
-          console.log(inView, idx, navItem.name);
-
           return (
             <motion.button
               key={`link=${idx}`}
