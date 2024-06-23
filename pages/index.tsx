@@ -55,7 +55,7 @@ export default function Home() {
     },
   ];
   return (
-    <div>
+    <div className="bg-black">
       <FloatingNav navItems={navItems} />
       <section
         id="home"

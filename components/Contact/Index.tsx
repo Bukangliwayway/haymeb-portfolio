@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Highlight } from "../ui/hero-highlight";
+import { ContactForm } from "../ui/contact-form";
 
 const Contact = () => {
   const fetchData = async () => {
@@ -9,22 +10,21 @@ const Contact = () => {
       method: "POST",
     });
     const data = await res.json();
-
-    console.log(data); // { name: "John Doe" }
   };
 
   return (
     <div className="flex flex-col">
       <div className="z-50 font-main-hero capitalize text-5xl text-center mt-28 mx-auto flex gap-2 justify-center items-center">
-        <span>My</span>
-        <Highlight className="text-black dark:text-white">Contacts</Highlight>
+        <Highlight className="text-black dark:text-white">Contact</Highlight>
+        <span>Me</span>
       </div>
-      <button
-        className="bg-white text-black p-2 rounded-md mt-4 mx-auto"
-        onClick={fetchData}
-      >
-        CLick me babyy
-      </button>
+      <div className="py-10 px-5 w-full flex flex-col items-center justify-center gap-10">
+        <h1 className="text-center ">
+          You may contact me directly at <u>jamesmatthewbelgica@gmail.com</u> or
+          through this form
+        </h1>
+        <ContactForm />
+      </div>
     </div>
   );
 };
