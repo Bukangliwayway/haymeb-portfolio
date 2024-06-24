@@ -19,7 +19,7 @@ const Texts = () => {
   return (
     <div className="relative mx-auto font-main-hero">
       <a
-        href="/BelgicaResume.pdf"
+        href="/HaymebResume.pdf"
         target="_blank"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
